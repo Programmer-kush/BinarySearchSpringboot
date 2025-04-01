@@ -18,10 +18,6 @@ public class SearchController {
             @RequestParam("array") int[] array,
             @RequestParam("target") int target) {
 
-        if (!isSorted(array)) {
-            return ResponseEntity.badRequest().body("Array must be sorted");
-        }
-
         int result = binarySearchService.binarySearch(array, target);
         return ResponseEntity.ok(Map.of(
                 "array", array,
@@ -30,12 +26,5 @@ public class SearchController {
         ));
     }
 
-    private boolean isSorted(int[] array) {
-        for (int i = 0; i < array.length - 1; i++) {
-            if (array[i] > array[i + 1]) {
-                return false;
-            }
-        }
-        return true;
-    }
+ 
 }
