@@ -68,4 +68,4 @@ This project was built with the assistance of AI/LLM tools for code generation, 
 This project is open-source and available under the MIT License.
 
 ---
-Happy coding! 🚀
+ 🚀
