@@ -15,14 +15,14 @@ public class SearchController {
 
     @GetMapping("/binary-search")
     public ResponseEntity<?> binarySearch(
-            @RequestParam("array") int[] array,
-            @RequestParam("target") int target) {
+            @RequestParam("Array") int[] array,
+            @RequestParam("Target") int target) {
 
         int result = binarySearchService.binarySearch(array, target);
         return ResponseEntity.ok(Map.of(
-                "array", array,
-                "target", target,
-                "resultIndex", result
+                "Array", array,
+                "Target", target,
+                "ResultIndex", result
         ));
     }
 
